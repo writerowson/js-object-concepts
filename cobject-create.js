@@ -1,16 +1,28 @@
-const student = {
-    id: 101,
-    name: 'rowson',
-    major: 'mathmethic',
-    isRich: false,
-    subjects: ['english', 'economics', 'english'],
-    bestfriend: {
-        name: 'kundu',
-        major: 'management'
-    },
-    takeExam: function () {
-        console.log(this.name, 'taking exam')
+
+
+// Using objects literal
+const student = { name: 'sakib', job: 'cricketer' };
+
+// constructor
+const person = new Object(student);
+console.log(person)
+
+// 
+const human = Object.create(student)
+console.log(human)
+// class syntactic sugar
+class People {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age
     }
 }
+const peop = new People('MAnus', 12);
+console.log(peop)
 
-student.takeExam
+// function
+function Manus(name) {
+    this.name = name;
+}
+const man = new Manus('kader');
+console.log(man)
